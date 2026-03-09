@@ -7,41 +7,65 @@
     <title>Q4 Drill 1</title> 
 
     <style>
-        .container-fluid{
+        body{
             background-color: bisque;
-            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container-fluid{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
         }
 
-        .row{
-            background-color: rgb(75, 75, 75);
-            padding: 15px;
+        h1{
+            font-size: 30px;
+            font-weight: bold;
         }
         
+        #box{
+            width: 575px;
+            background-color: #1a1d23;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 20px;
+            gap: 50px
+        }
+
         b{
             color: white;
+        }
+
+        input{
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        img{
+            display: block;
+            height: 50px; 
+            width: auto;
+            border-radius: 100px;
         }
     </style>
 </head> 
 <body>
     <div class="container-fluid">
-        <h1>Check Consumption Classification</h1>
-
+        <h1>Electricity Consumption Classifier</h1>
         <br>
 
-        <div class="row">
-            <div class="col-sm-1">
-                <b>kWh</b>
-            </div>
-
-            <div class="col-sm-5">
-                <input id="kwh" class="form-control">
-            </div>
-
-            <div class="col-sm-5">
-                <button class="btn btn-info" onclick="checkKwh()">Consumption Classification</button>
-            </div>
-        </div>
-        </div>
+        <div id="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZ6oTTdi1oSh_pRZW7VdYonCoHyFW4cRaRg&s" alt="meralcologo">
+            <b>kWh</b>
+            <input id="kwh" placeholder="Input kilowatt per hour">
+            <button class="btn btn-warning" onclick="checkKwh()">Consumption <br> Classification</button>
+        </div>  
     </div>
 
     <script>
