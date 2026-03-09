@@ -7,43 +7,25 @@
     <title>Q4 Drill 1</title> 
 
     <style>
-        .row{
-            background-color: rgb(68, 68, 68);
-            padding: 15px;
-        }
+        
     </style>
 </head> 
 <body>
-
-    <h2>Check Age Classification</h2>
+    <h1>Check Consumption Classification</h1>
     <br>
-
-    <div class="container row">
-        <div class="col-sm-1">
-            <b>kWh</b>
-        </div>
-
-        <div class="col-sm-3">
-            <input id="kWh" class="form-control" placeholder="Input kilowatt per hour">
-        </div>
-
-        <div class="col-sm-3">
-            <buttom class="btn btn-info" onclick="checkAge()">Consumption Classification</buttom>
-        </div>
-    </div>
-
-    
+    <input id="kwh" class="form-control">
+    <button class="btn btn-info" onclick="checkKwh()">Consumption Classification</button>
 
     <script>
-        function checkAge(){
-            var kwh = document.getElementById("kWh").value //assign value
-            var A = "Lifeline Consumer"; 
-            var B = "Normal residential rate";
-            var C = "Typical electricity usage";
-            var D = "Higher electricity usage";
-            var E = "Heavy electricity users";
+        function checkKwh (){
+            var kWh = document.getElementById("kwh").value;
+            var A = "Lifeline Consumer";
+            var B = "Low Consumption";
+            var C = "Average Consumption";
+            var D = "High Consumption";
+            var E = "Very High Consumption";
 
-               if (isNaN(kWh) || kWh < 0) {
+            if (isNaN(kWh) || kWh < 0) {
                 alert("Please assign a valid number.")
             }
 
